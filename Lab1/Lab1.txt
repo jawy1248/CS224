@@ -1,0 +1,25 @@
+Lab 1
+1)	/users/guest/c/cjw244
+2)	/users/guest/c/cjw244/cs224
+3)	0
+4)	7 – Bashful.txt, Doc.txt, Dopey.txt, Grumpy.txt, Happy.txt, Sleepy.txt, Sneezy.txt
+5)	5 - bears, house, beds, bowls, chairs
+6)	13
+a.	/users/guest/c/cjw244/cs224/Lab1/f2/Goldilocks.txt
+b.	/users/guest/c/cjw244/cs224/Lab1/f2/bears/BabyBear.txt
+c.	/users/guest/c/cjw244/cs224/Lab1/f2/bears/MamaBear.txt
+d.	/users/guest/c/cjw244/cs224/Lab1/f2/bears/PapaBear.txt
+e.	/users/guest/c/cjw244/cs224/Lab1/f2/house/beds/JustRight.txt
+f.	/users/guest/c/cjw244/cs224/Lab1/f2/house/beds/TooHard.txt
+g.	/users/guest/c/cjw244/cs224/Lab1/f2/house/beds/TooSoft.txt
+h.	/users/guest/c/cjw244/cs224/Lab1/f2/house/bowls/JustRight.txt
+i.	/users/guest/c/cjw244/cs224/Lab1/f2/house/bowls/TooHard.txt
+j.	/users/guest/c/cjw244/cs224/Lab1/f2/house/bowls/TooSoft.txt
+k.	/users/guest/c/cjw244/cs224/Lab1/f2/house/chairs/JustRight.txt
+l.	/users/guest/c/cjw244/cs224/Lab1/f2/house/chairs/TooHard.txt
+m.	/users/guest/c/cjw244/cs224/Lab1/f2/house/chairs/TooSoft.txt
+7)	cp Goldilocks.txt house/beds/
+8)	rm house/chairs/JustRight.txt
+9)	mv Theseus.txt Right/Right/Left/
+10)	/users/guest/c/cjw244/cs224/Lab1/f3/Right/Right/Left
+11)	224

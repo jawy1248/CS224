@@ -1,0 +1,14 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     myxxd
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _parseCommandLine, symObjAddr: 0x0, symBinAddr: 0x100003A00, symSize: 0xB0 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _parseCommandLine, symObjAddr: 0x0, symBinAddr: 0x100003A00, symSize: 0xB0 }
+  - { offsetInCU: 0x85, offset: 0x85, size: 0x8, addend: 0x0, symName: _printDataAsHex, symObjAddr: 0xB0, symBinAddr: 0x100003AB0, symSize: 0xC0 }
+  - { offsetInCU: 0xD3, offset: 0xD3, size: 0x8, addend: 0x0, symName: _printDataAsChars, symObjAddr: 0x170, symBinAddr: 0x100003B70, symSize: 0x60 }
+  - { offsetInCU: 0x121, offset: 0x121, size: 0x8, addend: 0x0, symName: _readAndPrintInputAsHex, symObjAddr: 0x1D0, symBinAddr: 0x100003BD0, symSize: 0xE0 }
+  - { offsetInCU: 0x16F, offset: 0x16F, size: 0x8, addend: 0x0, symName: _getBitsFromChar, symObjAddr: 0x2B0, symBinAddr: 0x100003CB0, symSize: 0x80 }
+  - { offsetInCU: 0x1BD, offset: 0x1BD, size: 0x8, addend: 0x0, symName: _printDataAsBits, symObjAddr: 0x330, symBinAddr: 0x100003D30, symSize: 0x110 }
+  - { offsetInCU: 0x237, offset: 0x237, size: 0x8, addend: 0x0, symName: _readAndPrintInputAsBits, symObjAddr: 0x440, symBinAddr: 0x100003E40, symSize: 0xB0 }
+  - { offsetInCU: 0x285, offset: 0x285, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x4F0, symBinAddr: 0x100003EF0, symSize: 0x5A }
+...

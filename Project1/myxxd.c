@@ -41,30 +41,17 @@ FILE *parseCommandLine(int argc, char **argv, int *bits) {
  * size: the size of the array
  **/
 void printDataAsHex(unsigned char *data, size_t size) {
-    for (int i = 0; i < size; i++) {
-        if (i == 0) {
-            if (data[i] == '\n')
-                printf(" 0a");
-            else
-                printf(" %x", data[i]);
+    for (int i = 0; i < 16; i++) {
+        if (i < size) {
+            if (i == 0)
+                printf(" ");
+            printf("%02x", data[i]);
+            if (i % 2 == 1)
+                printf(" ");
         } else {
-            if (i % 2 == 1) {
-                if (data[i] == '\n')
-                    printf("0a ");
-                else
-                    printf("%x ", data[i]);
-            } else {
-                if (data[i] == '\n')
-                    printf("0a");
-                else
-                    printf("%x", data[i]);
-            }
-        }
-    }
-
-    if (size != 16) {
-        for (int i = 0; i < (16 - size); i++) {
-            printf("     ");
+            printf("  ");
+            if (i % 2 == 1)
+                printf(" ");
         }
     }
 }
@@ -79,7 +66,8 @@ void printDataAsHex(unsigned char *data, size_t size) {
  **/
 void printDataAsChars(unsigned char *data, size_t size) {
     for (int i = 0; i < size; i++) {
-        if (data[i] == '\n')
+        int temp = data[i];
+        if (temp < 32 || temp > 126)
             printf(".");
         else
             printf("%c", data[i]);
@@ -110,11 +98,11 @@ void readAndPrintInputAsHex(FILE *input) {
  **/
 void getBitsFromChar(unsigned char ch, int bin[]) {
     for (int i = 7; i >= 0; i--) {
-        if (ch % 2 == 1) {
+        if (ch % 2 == 1)
             bin[i] = 1;
-        } else {
+        else
             bin[i] = 0;
-        }
+
         ch = ch / 2;
     }
 }

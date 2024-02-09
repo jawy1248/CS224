@@ -3,7 +3,7 @@
 int getPadding(int width)
 {
     // COMPUTE THE PADDING HERE AND RETURN IT
-    return 0; // CHANGE THIS LINE
+    return width%4;
 }
 
 int main()

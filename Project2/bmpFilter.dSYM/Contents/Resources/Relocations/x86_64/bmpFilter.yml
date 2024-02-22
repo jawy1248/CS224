@@ -1,0 +1,17 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     bmpFilter
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _parseCommandLine, symObjAddr: 0x0, symBinAddr: 0x1000038F0, symSize: 0x110 }
+  - { offsetInCU: 0x5A, offset: 0x5A, size: 0x8, addend: 0x0, symName: _parseCommandLine, symObjAddr: 0x0, symBinAddr: 0x1000038F0, symSize: 0x110 }
+  - { offsetInCU: 0x9E, offset: 0x9E, size: 0x8, addend: 0x0, symName: _getFileSizeInBytes, symObjAddr: 0x110, symBinAddr: 0x100003A00, symSize: 0x60 }
+  - { offsetInCU: 0xD4, offset: 0xD4, size: 0x8, addend: 0x0, symName: _getBmpFileAsBytes, symObjAddr: 0x170, symBinAddr: 0x100003A60, symSize: 0x90 }
+  - { offsetInCU: 0x114, offset: 0x114, size: 0x8, addend: 0x0, symName: _getAverageIntensity, symObjAddr: 0x200, symBinAddr: 0x100003AF0, symSize: 0x50 }
+  - { offsetInCU: 0x174, offset: 0x174, size: 0x8, addend: 0x0, symName: _applyGrayscaleToPixel, symObjAddr: 0x250, symBinAddr: 0x100003B40, symSize: 0x70 }
+  - { offsetInCU: 0x1C2, offset: 0x1C2, size: 0x8, addend: 0x0, symName: _applyThresholdToPixel, symObjAddr: 0x2C0, symBinAddr: 0x100003BB0, symSize: 0x80 }
+  - { offsetInCU: 0x21E, offset: 0x21E, size: 0x8, addend: 0x0, symName: _applyFilterToPixel, symObjAddr: 0x340, symBinAddr: 0x100003C30, symSize: 0x40 }
+  - { offsetInCU: 0x250, offset: 0x250, size: 0x8, addend: 0x0, symName: _applyFilterToRow, symObjAddr: 0x380, symBinAddr: 0x100003C70, symSize: 0x50 }
+  - { offsetInCU: 0x2AC, offset: 0x2AC, size: 0x8, addend: 0x0, symName: _applyFilterToPixelArray, symObjAddr: 0x3D0, symBinAddr: 0x100003CC0, symSize: 0x90 }
+  - { offsetInCU: 0x332, offset: 0x332, size: 0x8, addend: 0x0, symName: _parseHeaderAndApplyFilter, symObjAddr: 0x460, symBinAddr: 0x100003D50, symSize: 0xA0 }
+  - { offsetInCU: 0x39C, offset: 0x39C, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x500, symBinAddr: 0x100003DF0, symSize: 0xB5 }
+...

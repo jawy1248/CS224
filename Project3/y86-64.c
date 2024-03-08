@@ -96,8 +96,31 @@ void executeStage(int icode, int ifun, wordType valA, wordType valB, wordType va
 
     // For opq
     else if(icode == OPQ){
-//        bool OF = overflowFlag;
-//        *valE ==
+        bool cond = FALSE;
+
+        // For Add, Sub
+        if(ifun == ADD || ifun == SUB){
+            if(ifun == ADD)
+                *valE = valB + valA;
+            else {
+                *valE = valB - valA;
+                valA = -valA;
+            }
+
+            cond = (((valA < 0) && (valB < 0)) && (*valE >= 0)) || (((valA > 0) && (valB > 0)) && (*valE < 0));
+
+        }
+
+        // For AND
+        else if (ifun == AND)
+            *valE = valB & valA;
+
+        // For XOR
+        else if (ifun == XOR)
+            *valE = valB ^ valA;
+
+        // Set flags
+        setFlags(*valE < 0, *valE == 0, cond);
     }
 
     // For 'rr' move
@@ -179,7 +202,7 @@ void pcUpdateStage(int icode, wordType valC, wordType valP, bool Cnd, wordType v
 
     // For jump
     else if(icode == JXX)
-        setPC();
+        setPC(Cnd ? valC : valP);
 
     // For call
     else if(icode == CALL)

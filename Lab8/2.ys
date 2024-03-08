@@ -1,0 +1,11 @@
+irmovq src, %rdi
+irmovq dest, %rsi
+
+mrmovq (%rdi), %rdx
+rmmovq %rdx, (%rsi)
+
+mrmovq 8(%rdi), %rdx
+rmmovq %rdx, 8(%rsi)
+
+mrmovq 16(%rdi), %rdx
+rmmovq %rdx, 16(%rsi)

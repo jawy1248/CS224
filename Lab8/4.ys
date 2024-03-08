@@ -1,0 +1,34 @@
+
+irmovq $1, %r8      # Decremment constant
+subq %r8, %rax      # Get to n-1
+irmovq data, %rsi
+irmovq $8, %r12
+
+outLoop:
+    irmovq $0, %r9      # 'Swapped' = False
+    rrmovq %rax, %r14
+    
+    inLoop:
+        # comparing A[i] and A[i + 1]
+        mrmovq (%rsi), %rcx
+        mrmovq 8(%rsi), %rdx
+        subq %rcx, %rdx
+        mrmovq 8(%rsi), %rdx
+        jg lessThan
+    
+        # if A[i] > A[i + 1]
+        rmmovq %rdx, (%rsi)
+        rmmovq %rcx, 8(%rsi)
+        irmovq $1, %r9      # 'Swapped' = True
+            
+        lessThan:
+        addq %r12, %rsi
+        subq %r8, %r14      # Get to n-1
+        andq %r14, %r14     # See if we are at 0
+        jne inLoop          # If not 0, start inner loop again
+    
+        # See if we need to repeat
+        irmovq data, %rsi
+        andq %r9, %r9
+        jne outLoop
+

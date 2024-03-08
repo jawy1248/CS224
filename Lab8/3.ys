@@ -1,0 +1,12 @@
+irmovq $0, %rax             # Start sum at 0
+irmovq list, %rdi           # Get address of list
+
+linkStart:
+    mrmovq (%rdi), %rbx     # Get value of address
+    addq %rbx, %rax         # Add to sum
+    mrmovq 8(%rdi), %rdi    # Get next address
+    
+    andq %rdi, %rdi         # Set flag if next label is 0
+    jne linkStart
+
+

@@ -1,0 +1,30 @@
+# 1a) Place 10 in %rax
+irmovq  $10, %rax
+
+# 1b) Add rax to %rcx and store in %rcx
+addq %rax, %rcx
+
+# 1c) Check if %rax is zero, if it is jump to ifzero:
+andq %rdx, %rdx
+je ifzero
+
+# 1d) swap %rax with %rbx
+rrmovq %rax, %rdi
+rrmovq %rbx, %rax
+rrmovq %rdi, %rbx
+
+.align 8
+a:
+   .quad 0xaaaa
+b:
+   .quad 0x0000
+
+# 1e) puts value in a: into %rdx
+irmovq a, %rsi
+mrmovq (%rsi), %rdx
+
+# 1f) puts 0xbbbb into memory location at b:
+irmovq $0xbbbb, %rdi
+irmovq b, %rax
+rmmovq %rdi, (%rax)
+
